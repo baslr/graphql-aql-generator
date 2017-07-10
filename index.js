@@ -33,15 +33,10 @@ const lodash_1 = require('lodash');
 const db = require('@arangodb').db;
 
 const graphql = gql.graphql;
-if (!graphql) console.log('!graphql');
 
 const buildASTSchema = gql.buildASTSchema;
-if (!buildASTSchema) console.log('!buildASTSchema');
 const extendSchema = gql.extendSchema;
-if (!extendSchema) console.log('!extendSchema');
-
 const parse = gql.parse;
-if (!parse) console.log('!parse');
 
 const graphql_1 = gql;
 const graphql_3 = gql;
@@ -84,13 +79,13 @@ function _generateSchema(
 
   ast.definitions.forEach( objectDefinition => {
     if (objectDefinition.name.value == 'Query') {
-      console.log('objectDefinition Query');
+      // console.log('objectDefinition Query');
 
       objectDefinition.fields.forEach(field => {
         const fieldName = field.name.value;
-        print('fieldName', fieldName);
+        // print('fieldName', fieldName);
         const collection = field.type.name.value;
-        print('collection', collection);
+        // print('collection', collection);
         
         /*const args = field.arguments;
         const argList = [];
@@ -109,8 +104,8 @@ function _generateSchema(
 
             const filterList = Object.keys(args).map(arg => `doc.${arg} == ${'string' === typeof args[arg] ? "'" + args[arg] + "'" : args[arg] }`);
 
-            print('filterList', filterList);
-            print(`for doc in ${collection} filter ${filterList.join(' AND ')} return doc`);
+            // print('filterList', filterList);
+            // print(`for doc in ${collection} filter ${filterList.join(' AND ')} return doc`);
             const res = db._query(`for doc in ${collection} filter ${filterList.join(' AND ')} return doc`).toArray();
 
             return res.pop();
@@ -121,7 +116,7 @@ function _generateSchema(
       print(JSON.parse(JSON.stringify(objectDefinition)));
       print('----- != QUERY -----');*/
       const objectTypeName = objectDefinition.name.value;
-      print('objectTypeName', objectTypeName);
+      // print('objectTypeName', objectTypeName);
       objectDefinition.fields.forEach(field => {
         const fieldName = field.name.value;
 
@@ -135,21 +130,21 @@ function _generateSchema(
             if ('exec' === arg.name.value) {
               const aql = arg.value.value;
               const parseResult = db._parse(aql);
-              print('---parse result-----');
+              /*print('---parse result-----');
               print(parseResult);
-              print('---parse result-----');
+              print('---parse result-----');*/
               const usesCurrent = !!~parseResult.bindVars.indexOf('current');
 
               if (!resolveFunctions[objectTypeName]) resolveFunctions[objectTypeName] = {};
 
               resolveFunctions[objectTypeName][fieldName] = function(obj, emptyObject, dontknow, returnTypeOperationDesc) {
 
-                print('-- ARGUMENTS --');
+                /*print('-- ARGUMENTS --');
                 print(JSON.parse(JSON.stringify(arguments)));
                 print('-- ARGUMENTS --');
                 print('-----OBJ-----');
                 print(obj);
-                print('-----OBJ-----');
+                print('-----OBJ-----');*/
 
                 const params = {};
                 if (usesCurrent) {
