@@ -1,5 +1,11 @@
 # sgq
-schema graphql query – query GraphQL with only a GraphQL IDL schema
+schema graphql query – query GraphQL with only a GraphQL IDL schema.
+
+Are you tired of writing GraphQL.js schema files?
+
+Then try `sgq`. `sgq` needs only a GraphQL IDL file and generates the GraphQL.js schema automatically.
+
+
 
 # Example
 
