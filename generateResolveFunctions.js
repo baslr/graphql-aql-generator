@@ -1,4 +1,4 @@
-
+'use strict';
 
 module.export = (ast, resolveFunctions) => {
   ast.definitions.forEach( objectDefinition => {
