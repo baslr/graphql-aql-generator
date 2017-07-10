@@ -1,6 +1,6 @@
 {
   "name": "sgq",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "query graphql with only a graphql idl schema",
   "main": "index.js",
   "scripts": {
