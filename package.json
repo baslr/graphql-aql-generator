@@ -1,0 +1,25 @@
+{
+  "name": "sgq",
+  "version": "1.0.0",
+  "description": "query graphql with only a graphql idl schema",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baslr/sgq.git"
+  },
+  "keywords": [
+    "graphql",
+    "idl",
+    "schema",
+    "query"
+  ],
+  "author": "Manuel Baesler",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/baslr/sgq/issues"
+  },
+  "homepage": "https://github.com/baslr/sgq#readme"
+}
