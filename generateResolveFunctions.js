@@ -1,6 +1,6 @@
 'use strict';
 
-module.export = (ast, resolveFunctions) => {
+module.exports = (ast, resolveFunctions) => {
   ast.definitions.forEach( objectDefinition => {
     if (objectDefinition.name.value == 'Query') {
       // console.log('objectDefinition Query');

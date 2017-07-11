@@ -29,10 +29,12 @@ SOFTWARE.
 'use strict';
 
 const gql = require('graphql-sync');
+const graphql = gql.graphql;
+
 const lodash_1 = require('lodash');
 const db = require('@arangodb').db;
 
-const graphql = gql.graphql;
+const generateResolveFunctions = require('./generateResolveFunctions');
 
 const buildASTSchema = gql.buildASTSchema;
 const extendSchema = gql.extendSchema;
@@ -77,7 +79,7 @@ function _generateSchema(
   print(JSON.stringify(ast, false, 2));
   print('------- AST ----------');*/
 
-    // call generateResolveFunctions
+  generateResolveFunctions(ast, resolveFunctions);
 
 
 
