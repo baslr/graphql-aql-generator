@@ -64,3 +64,4 @@ print(result);
 }
 */`
 ```
+In this example two types and a query are defined. `BlogEntry` and `Author`. BlogEntry has a sub attribute Author which is fetched with a @aql directive. The query returns a BlogEntry with the corresponding Author depending on the BlogEntries _key.
