@@ -1,9 +1,9 @@
-# sgq
+# graphql-aql-generator
 schema graphql query – query GraphQL with only a GraphQL IDL schema.
 
 Are you tired of writing GraphQL.js schema files?
 
-Then try `sgq`. `sgq` needs only a GraphQL IDL file and generates the GraphQL.js schema automatically.
+Then try `graphql-aql-generator`. `graphql-aql-generator` needs only a GraphQL IDL file and generates the GraphQL.js schema automatically.
 
 
 
@@ -14,7 +14,7 @@ Then try `sgq`. `sgq` needs only a GraphQL IDL file and generates the GraphQL.js
 'use strict';
 
 const graphql = require('graphql-sync').graphql;
-const sgq = require('sgq');
+const generator = require('graphql-aql-generator');
 
 
 let typeDefs = [`
@@ -35,7 +35,7 @@ let typeDefs = [`
   }
 `]
 
-const schema = sgq(typeDefs);
+const schema = generator(typeDefs);
 
 const query = `
 {
