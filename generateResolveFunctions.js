@@ -60,7 +60,10 @@ module.exports = (ast, resolveFunctions) => {
               /*print('---parse result-----');
               print(parseResult);
               print('---parse result-----');*/
-              const usesCurrent = !!~parseResult.bindVars.indexOf('current');
+
+
+              // ?: will be fixed by https://github.com/arangodb/arangodb/pull/2772 sometimes
+              const usesCurrent = !!~(parseResult.bindVars ? parseResult.bindVars : parseResult.parameters).indexOf('current');
 
               if (!resolveFunctions[objectTypeName]) resolveFunctions[objectTypeName] = {};
 
