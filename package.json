@@ -1,5 +1,5 @@
 {
-  "name": "sgq",
+  "name": "graphql-aql-generator",
   "version": "1.0.3",
   "description": "query graphql with only a graphql idl schema",
   "main": "index.js",
@@ -8,10 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/baslr/sgq.git"
+    "url": "git+https://github.com/baslr/graphql-aql-generator.git"
   },
   "keywords": [
     "graphql",
+    "aql",
+    "generator",
     "idl",
     "schema",
     "query"
@@ -19,9 +21,9 @@
   "author": "Manuel Baesler",
   "license": "AGPL-3.0",
   "bugs": {
-    "url": "https://github.com/baslr/sgq/issues"
+    "url": "https://github.com/baslr/graphql-aql-generator/issues"
   },
-  "homepage": "https://github.com/baslr/sgq#readme",
+  "homepage": "https://github.com/baslr/graphql-aql-generator#readme",
   "dependencies": {
     "graphql-sync": "0.10.1-sync"
   }
