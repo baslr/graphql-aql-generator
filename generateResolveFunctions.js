@@ -3,7 +3,7 @@
 module.exports = (ast, resolveFunctions) => {
   ast.definitions.forEach( objectDefinition => {
 
-    if (objectDefinition.kind !== 'ObjectTypeDefinition') continue;
+    if (objectDefinition.kind !== 'ObjectTypeDefinition') return;
 
     if (objectDefinition.name.value == 'Query') {
       // console.log('objectDefinition Query');
