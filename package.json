@@ -26,5 +26,6 @@
   "homepage": "https://github.com/baslr/graphql-aql-generator#readme",
   "dependencies": {
     "graphql-sync": "0.10.1-sync"
-  }
+  },
+  "devDependencies": {}
 }
