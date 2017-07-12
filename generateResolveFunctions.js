@@ -1,5 +1,7 @@
 'use strict';
 
+const db = require('@arangodb').db;
+
 module.exports = (ast, resolveFunctions) => {
   ast.definitions.forEach( objectDefinition => {
 

@@ -32,7 +32,6 @@ const gql = require('graphql-sync');
 const graphql = gql.graphql;
 
 const lodash_1 = require('lodash');
-const db = require('@arangodb').db;
 
 const generateResolveFunctions = require('./generateResolveFunctions');
 
